@@ -1,7 +1,8 @@
 # Pseudo-classes-Pseudo-element
 <h1>css伪类和伪元素详解</h1>
-
-
+<h2>伪类和伪元素的区分</h2>
+<p>伪类和伪元素的根本区别在于：它们是否创造了新的元素(抽象)。从我们模仿其意义的角度来看，如果需要添加新元素加以标识的，就是伪元素，反之，如果只需要在既有元素上添加类别的，就是伪类。而这也是为什么，标准精确地使用 “create” 一词来解释伪元素，而使用 “classify” 一词来解释伪类的原因。一个描述的是新创建出来的“幽灵”元素，另一个则是描述已经存在的符合“幽灵”类别的元素。</p>
+<p>前面一个冒号  :   的是伪类，两个冒号   ::    的是伪元素</p>
 <h2>伪类</h2>
 <h3>1.属性选择器</h3>
   以a为例，选择.main 下相关a元素
@@ -116,3 +117,53 @@
           border: 2px solid blue;
         }        
         
+:checked状态选择器
+
+        //状态为checked的元素的下一个兄弟节点透明度为1
+        input[type="checkbox"]:checked + span {
+          opacity: 1;
+        } 
+
+:read-only 指定处于只读状态的元素
+
+        input[type="text"]:-moz-read-only{
+          border-color: #ccc;
+        }
+        input[type="text"]:read-only{
+          border-color: #ccc;
+        }
+        //指定非只读状态
+        input[type="text"]:-moz-read-write{
+          border:2px solid red;
+        }
+        input[type="text"]:read-write{
+          border:2px solid red;
+        }
+        
+<h2>伪元素</h2>
+::selection  设置选中状态文字的字体和颜色
+
+        ::-moz-selection {
+          background: red;
+          color: green;
+        }
+        ::selection {
+          background: red;
+          color: green;
+        }
+
+::before和::after 给元素的前面或后面（z轴方向）插入内容
+
+         //清除浮动
+        .clearfix::before,
+        .clearfix::after {
+            //content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        .clearfix:after {clear: both;}
+        .clearfix {zoom: 1;}
+        
+    
