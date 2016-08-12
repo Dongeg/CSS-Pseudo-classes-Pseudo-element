@@ -141,7 +141,7 @@
         }
         
 <h2>伪元素</h2>
-::selection  设置选中状态文字的字体和颜色
+::selection  设置选中状态文字的颜色和背景颜色
 
         ::-moz-selection {
           background: red;
