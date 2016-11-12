@@ -154,7 +154,7 @@ content:"台词：";
 </head>
 
 <body>
-
+<!--在每个 <p> 元素的内容之前插入新内容：  -->
 <p>我是唐老鸭。</p>
 <p>我住在 Duckburg。</p>
 <p><b>注释：</b>对于在 IE8 中工作的 :before，必须声明 DOCTYPE。</p>
