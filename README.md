@@ -140,6 +140,36 @@
           border:2px solid red;
         }
         
+ :before（:after同理）
+ ```html
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+p:before
+{
+content:"台词：";
+}
+</style>
+</head>
+
+<body>
+
+<p>我是唐老鸭。</p>
+<p>我住在 Duckburg。</p>
+<p><b>注释：</b>对于在 IE8 中工作的 :before，必须声明 DOCTYPE。</p>
+
+</body>
+</html>
+ ```
+ result
+ ```
+台词：我是唐老鸭。
+
+台词：我住在 Duckburg。
+
+台词：注释：对于在 IE8 中工作的 :before，必须声明 DOCTYPE。
+ ```
 <h2>伪元素</h2>
 ::selection  设置选中状态文字的颜色和背景颜色
 
