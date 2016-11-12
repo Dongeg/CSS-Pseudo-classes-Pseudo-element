@@ -6,7 +6,7 @@
 <h2>伪类</h2>
 <h3>1.属性选择器</h3>
   以a为例，选择.main 下相关a元素
-  
+```css  
   
              //匹配属性值开头部分
              .main a[class^=column]{
@@ -21,22 +21,22 @@
                 background:blue;
             }
   
-
+```
 <h3>2.伪类选择器</h3>
 
 :root根节点选择器
-
+```css
         :root {
           background:orange;
         }
-        
+```  
 :not非选择器
-
+```css
        //#main 下除了type="submit"外其他的input标签
        #main input:not([type="submit"]){
           border:1px solid red;
         }
-
+```
 :empty空元素选择器
 
         //选出内容为空的p标签
